@@ -2,7 +2,7 @@ import 'package:flutter/material.dart'; //Import the material package
 
 class IntroCard extends StatelessWidget {
   final String text;
-  const IntroCard({required this.text,Key? key}) : super(key: key);
+  const IntroCard({required this.text, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,3 +33,5 @@ class IntroCard extends StatelessWidget {
     );
   }
 }
+//Abstracting makes it easier for widget reusability
+//Pass parameters to widget to increase reusability 
