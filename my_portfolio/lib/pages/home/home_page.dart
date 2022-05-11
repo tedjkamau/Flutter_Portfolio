@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       body: Center(
           child: Container(
         width: 300,
-        height: 100,
+        height: 150,
         //Add equal padding to all sides,
         padding: const EdgeInsets.all(25.0),
         alignment: Alignment.bottomCenter,
@@ -26,8 +26,14 @@ class HomePage extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
           border: Border.all(color: Colors.black, width: 2),
         ),
-        child: const Text("Welcome :) My name is Ted"),
+        child: Text("Welcome :) My name is Ted",
+        textAlign: TextAlign.center,//Text Alignment
+        style:TextStyle(color: Colors.grey.shade900,//Add color to the text
+                        fontSize: 20,//Font Size
+                        fontWeight: FontWeight.bold//Font Weight
+                        ),//Text style
       )),
+    )
     );
   }
 }
