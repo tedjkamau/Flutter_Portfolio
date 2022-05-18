@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/pages/home/ProjectCard.dart';
 import 'package:my_portfolio/widgets/Header/header.dart';
 import 'package:my_portfolio/widgets/cards/intro_card.dart';
 
@@ -18,7 +19,18 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Header()],
+                    children: [
+                      Header(),
+                      Text(
+                        "Projects",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      ProjectCard()
+                    ],
                   ),
                 ))));
   }
