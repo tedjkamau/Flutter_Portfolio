@@ -30,10 +30,14 @@ class HomePage extends StatelessWidget {
                         height: 10,
                       ),
                       ProjectCard(
-                          projectName: "My project",
-                          projectYear: 2022,
-                          projectDescription:
-                              "This is the project description where I will be writing details of the project")
+                        projectName: "My project",
+                        projectYear: 2022,
+                        projectDescription:
+                            "This is the project description where I will be writing details of the project",
+                        projectImage:
+                            "https://cdn.mos.cms.futurecdn.net/Pb7XnLPRsq8aYHW22EUzx6.jpg",
+                        //The image changed even though in the project card there is a default image
+                      )
                     ],
                   ),
                 ))));
