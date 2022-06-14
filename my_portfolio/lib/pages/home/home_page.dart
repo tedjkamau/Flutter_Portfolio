@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/example/projects.dart';
 import 'package:my_portfolio/widgets/Header/header.dart';
-import 'package:my_portfolio/widgets/cards/intro_card.dart';
 import 'package:my_portfolio/widgets/cards/project_card.dart';
 
 //Create HomePage which will be called to the main dart
@@ -16,8 +16,8 @@ class HomePage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 child: Padding(
-                    padding: EdgeInsets.all(15),
-                    child: (SingleChildScrollView(
+                    padding: const EdgeInsets.all(15.0),
+                    child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -34,41 +34,17 @@ class HomePage extends StatelessWidget {
                             height: 10,
                           ),
                           SizedBox(
-                            height: MediaQuery.of(context).size.height,
-                            child: ListView(
-                              children: const [
-                                ProjectCard(
-                                  projectName: "My project",
-                                  projectYear: 2022,
-                                  projectDescription:
-                                      "This is the project description where I will be writing details of the project",
-                                  projectImage:
-                                      "https://cdn.mos.cms.futurecdn.net/Pb7XnLPRsq8aYHW22EUzx6.jpg",
-                                  //The image changed even though in the project card there is a default image
-                                ),
-                                ProjectCard(
-                                  projectName: "My project",
-                                  projectYear: 2022,
-                                  projectDescription:
-                                      "This is the project description where I will be writing details of the project",
-                                  projectImage:
-                                      "https://cdn.mos.cms.futurecdn.net/Pb7XnLPRsq8aYHW22EUzx6.jpg",
-                                  //The image changed even though in the project card there is a default image
-                                ),
-                                ProjectCard(
-                                  projectName: "My project",
-                                  projectYear: 2022,
-                                  projectDescription:
-                                      "This is the project description where I will be writing details of the project",
-                                  projectImage:
-                                      "https://cdn.mos.cms.futurecdn.net/Pb7XnLPRsq8aYHW22EUzx6.jpg",
-                                  //The image changed even though in the project card there is a default image
-                                )
-                              ],
+                            height: 350,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: projects.length,
+                              itemBuilder: (context, index) {
+                                return ProjectCard(project: projects[index]);
+                              },
                             ),
                           )
                         ],
                       ),
-                    ))))));
+                    )))));
   }
 }

@@ -1,46 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/models/project.dart';
 
 class ProjectCard extends StatelessWidget {
-  //Parameters
-  final String projectName;
-  final int projectYear;
-  final String projectImage;
-  final String projectDescription;
-  const ProjectCard(
-      //Constructors to pass parameters everytime the card is initialised.
-      {required this.projectName,
-      required this.projectYear,
-      this.projectImage =
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      //instead of calling pictures, set a default value, this is a default value for practice.
-      //This is a hard coded fix where they cannot be altered without modifying the program
-      required this.projectDescription,
-      Key? key})
-      : super(key: key);
+  //class ProjectCard extends StatelessWidget {
+  final Project project;
+
+  const ProjectCard({required this.project, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350,
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.only(top: 15.0, right: 25.0, bottom: 25.0),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15.0),
-          boxShadow: [BoxShadow(offset: const Offset(5, 15), blurRadius: 15)]),
+          boxShadow: const [BoxShadow(offset: Offset(5, 15), blurRadius: 15)]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("My Project", style: TextStyle(fontSize: 18)),
+              Text(project.name, style: const TextStyle(fontSize: 18)),
               Container(
                 decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(15)),
                 padding: const EdgeInsets.all(5),
                 child: Text(
-                  projectYear.toString(),
+                  project.year.toString(),
                   style: const TextStyle(fontSize: 14, color: Colors.white),
                 ),
               ),
@@ -52,7 +42,7 @@ class ProjectCard extends StatelessWidget {
           Expanded(
               child: ClipRRect(
             child: Image.network(
-              projectImage,
+              project.imageUrl,
               fit: BoxFit.cover,
             ),
           )),
@@ -60,7 +50,7 @@ class ProjectCard extends StatelessWidget {
             height: 10,
           ),
           Text(
-            projectDescription,
+            project.description,
             maxLines: 3,
             style:
                 const TextStyle(fontSize: 14, overflow: TextOverflow.ellipsis),
