@@ -11,6 +11,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         //SafeArea is a widget that adds padding to the edges of the screen
+        floatingActionButton: FloatingActionButton(
+            child: const Icon(Icons.share, color: Colors.white),
+            backgroundColor: Colors.black,
+            onPressed: (() {
+              print("Button Pressed");
+            })),
         body: SafeArea(
             child: SizedBox(
                 width: MediaQuery.of(context).size.width,
