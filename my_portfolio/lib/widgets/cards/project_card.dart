@@ -14,7 +14,7 @@ class ProjectCard extends StatelessWidget {
         onTap: () => Navigator.push(context,
             MaterialPageRoute(builder: (_) => ProjectDetail(project: project))),
         child: Container(
-          width: MediaQuery.of(context).size.width,
+          width: 300,
           margin: const EdgeInsets.only(top: 15.0, right: 25.0, bottom: 25.0),
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(

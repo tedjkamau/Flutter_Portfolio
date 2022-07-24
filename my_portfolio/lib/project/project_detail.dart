@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/models/project.dart';
+import 'package:my_portfolio/responsive.dart';
 
 class ProjectDetail extends StatelessWidget {
   final Project project;
@@ -52,15 +53,24 @@ class ProjectDetail extends StatelessWidget {
                         height: 25,
                       ),
                       Hero(
-                        tag: project.name,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image.network(
-                            project.imageUrl,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                      ),
+                          tag: project.name,
+                          child: Responsive(
+                            mobile: Image.network(
+                              project.imageUrl,
+                              fit: BoxFit.cover,
+                            ),
+                            tablet: Image.network(
+                              project.imageUrl,
+                              fit: BoxFit.cover,
+                            ),
+                            desktop: SizedBox(
+                              height: 350,
+                              child: Image.network(
+                                project.imageUrl,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          )),
                       const Text(
                         "Technologies",
                         style: TextStyle(
@@ -111,8 +121,9 @@ class HorizontalTechView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Container(
             alignment: Alignment.center,
-            padding: const EdgeInsets.only(top: 15, right: 15, left: 15),
-            margin: const EdgeInsets.only(right: 15),
+            padding:
+                const EdgeInsets.only(top: 10, right: 10, left: 10, bottom: 10),
+            margin: const EdgeInsets.only(right: 10),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
                 borderRadius: BorderRadius.circular(15),

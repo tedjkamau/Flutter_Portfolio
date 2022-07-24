@@ -2,32 +2,44 @@ import 'package:my_portfolio/models/project.dart';
 
 List<Project> projects = [
   Project(
-      name: "Flutter Finance",
-      technologiesUsed: ["Flutter", "AWS", "Git"],
-      year: 2018,
+      name: "Pneumonia Detection",
+      year: 2022,
+      technologiesUsed: [
+        "Gradio",
+        "Python",
+        "Tensorflow",
+        "Pandas",
+        "Numpy",
+        "Pandas"
+      ],
       description:
-          "Worked on creating a dashboard with Flutter that displayed SaaS metrics such as LTV, MMR and Churn Rates.",
+          "This is my final project where the use of deep learning techniques of 4 models were used to test effectiveness of classification",
       imageUrl:
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"),
+          "https://upload.wikimedia.org/wikipedia/commons/a/a1/Normal_posteroanterior_%28PA%29_chest_radiograph_%28X-ray%29.jpg"),
   Project(
-      name: "Delivery App",
-      technologiesUsed: ["Flutter", "Firebase"],
-      year: 2019,
-      description: "This is my description 1",
+      name: "Chat Bot",
+      year: 2022,
+      technologiesUsed: [
+        "Gradio",
+        "Python",
+        "Tensorflow",
+        "Pandas",
+        "Numpy",
+        "Pandas",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      description:
+          "This project was to help build my deep learning skills and the creation of a chat bot(to be updated)",
       imageUrl:
-          "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"),
+          "https://media.istockphoto.com/vectors/robot-icon-bot-sign-design-chatbot-symbol-concept-voice-support-bot-vector-id1073043572?k=20&m=1073043572&s=612x612&w=0&h=WPpV4zW2oxJWS9nseA0IDFthj2IXsE7dbGBrPTGQNOI="),
   Project(
-      name: "3D modelling",
-      technologiesUsed: ["Pro Create", "Flutter", "Firebase"],
-      year: 2020,
-      description: "This is my description 1",
+      name: "FIFA Data Analysis",
+      year: 2022,
+      technologiesUsed: ["Python", "Linear Regression", "Numpy", "Pandas"],
+      description:
+          "This project was for practicing Exploratory Data Analysis, where the use of analysis techniques and libraries would compare player strengths, attributes and use linear regression to predict future attributes",
       imageUrl:
-          "https://images.unsplash.com/photo-1596496050827-8299e0220de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"),
-  Project(
-      name: "Android/Web Application",
-      technologiesUsed: ["Android Studio", "Next.js", "OAuth"],
-      year: 2021,
-      description: "This is my description 1",
-      imageUrl:
-          "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"),
+          "https://play-lh.googleusercontent.com/RC551IFqJwz5ymg_h1eizSLyKUaJc-HCAxI5OzXZgQGY03_9mOP_1VFNdx8u7QnGOTnh")
 ];

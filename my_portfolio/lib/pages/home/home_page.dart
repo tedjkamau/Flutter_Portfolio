@@ -3,6 +3,7 @@ import 'package:my_portfolio/example/projects.dart';
 import 'package:my_portfolio/responsive.dart';
 import 'package:my_portfolio/widgets/Header/header.dart';
 import 'package:my_portfolio/widgets/cards/project_card.dart';
+import 'package:share_plus/share_plus.dart';
 
 //Create HomePage which will be called to the main dart
 class HomePage extends StatelessWidget {
@@ -16,7 +17,8 @@ class HomePage extends StatelessWidget {
             child: const Icon(Icons.share, color: Colors.white),
             backgroundColor: Colors.black,
             onPressed: (() {
-              print("Button Pressed");
+              Share.share(
+                  "Check out my Github for more https://github.com/c0desh1n0b1");
             })),
         body: SafeArea(
             child: SizedBox(
